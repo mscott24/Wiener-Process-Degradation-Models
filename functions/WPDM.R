@@ -73,7 +73,12 @@ WPDM <- function(df, idvar, timevar, Yvar, estimator, modtype, params0, ...) {
   require(pbapply)
   require(parallel)
   
-  files <- c("profile_u.R", "profile_mle.R", "optim_ll.R", "utility.R", "simulations.R", "derivatives.R")
+  files <- c("functions/profile_u.R", 
+             "functions/profile_mle.R", 
+             "functions/optim_ll.R", 
+             "functions/utility.R", 
+             "functions/simulations.R", 
+             "functions/derivatives.R")
   invisible(lapply(files, function(f) source(f, echo = FALSE)))
   
   df <- FormatDiffDF(df = df, 

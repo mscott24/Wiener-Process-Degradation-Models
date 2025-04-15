@@ -1,8 +1,8 @@
 # Here are a few examples of implementing the WPDM.R function to run a Wiener 
 # process degradation model.
 
-source('WPDM.R')
-load('example_data.RData')
+source('functions/WPDM.R')
+load('data/example_data.RData')
 
 # model 3 with L-BFGS optimizer (default)
 WPDM(df=example_data$m3, idvar='Patient', timevar='t', Yvar='Y')
